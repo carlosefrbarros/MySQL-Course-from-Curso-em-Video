@@ -86,10 +86,13 @@ add column idcurso int first;
 describe cursos;
 
 alter table cursos
+add primary key (idcurso);
+
+alter table cursos
 drop primary key;
 
 alter table cursos
-add primary key idcurso;
+modify column idcurso int primary key first;
 
 drop table cursos;
 
