@@ -1,3 +1,5 @@
+#3th and 4th Classes
+
 create database cadastro
 default character set utf8mb4
 default collate utf8mb4_general_ci;
@@ -14,6 +16,8 @@ altura decimal(3,2),
 nacionalidade varchar(20) default 'Brasil',
 primary key(id)
 )default charset utf8mb4;
+
+#5th Class
 
 insert into pessoas
 (nome, nascimento, sexo, peso, altura, nacionalidade)
@@ -143,3 +147,20 @@ limit 1;
 truncate table cursos;
 
 select * from cursos;
+
+#8th Class
+
+#dump created -> server > data export
+
+drop database cadastro;
+
+#dump imported -> server > data import
+
+use cadastro;
+
+show tables;
+
+desc cursos;
+
+select * from cursos;
+
