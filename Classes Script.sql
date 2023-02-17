@@ -164,3 +164,17 @@ desc cursos;
 
 select * from cursos;
 
+#9th Class
+
+#commands used at the MySQL Console
+
+show databases;
+
+#status;
+
+use cadastro;
+
+show tables;
+
+describe cursos;
+
