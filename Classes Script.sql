@@ -233,5 +233,82 @@ order by ano, nome;
 select nome, carga, totaulas from cursos
 where carga > 35 and totaulas < 30;
 
+#12th Class
 
+use cadastro;
 
+select * from cursos
+where nome like 'P%';
+
+select * from cursos
+where nome like 'a%';
+
+select * from cursos
+where nome like '%a';
+
+select * from cursos
+where nome like '%a%';
+
+select * from cursos
+where nome not like '%a%';
+
+select * from cursos
+where nome like 'ph%p%';
+
+select * from cursos
+where nome like 'ph%p_';
+
+select distinct carga from cursos;
+
+select nacionalidade from gafanhotos;
+
+select distinct nacionalidade from gafanhotos
+order by nacionalidade;
+
+select count(*) from cursos;
+
+select count(*) from cursos
+where carga > 40;
+
+select max(carga) from cursos;
+
+select max(totaulas) from cursos;
+
+select max(totaulas) from cursos
+where ano = '2016';
+
+select min(totaulas) from cursos
+where ano = '2016';
+
+select sum(totaulas) from cursos
+where ano = '2016';
+
+select avg(totaulas) from cursos where ano = '2016';
+
+#exercises
+
+#uma lista com o nome de todas as gafanhotas
+
+select nome from gafanhotos where sexo = 'F';
+
+#uma lista com os dados de todos aqueles que nasceram entre 01/jan/2000 e 31/dez/2015
+
+select * from gafanhotos where nascimento > '2000-01-01' and nascimento < '2015-12-31';
+
+#uma lista com o nome de todos os homens que trabalham como Programadores
+
+select nome from gafanhotos where sexo = 'M' and profissao = 'Programador';
+
+#uma lista com os dados de todas as mulheres que nasceram no Brasil e que têm seu nome iniciando com a letra J
+
+select * from gafanhotos where nacionalidade = 'Brasil' and sexo = 'F' and nome like 'j%';
+
+#uma lista com o nome e nacionalidade de todos os homens que têm Silva no nome, não nasceram no Brasil e pesam menos de 100 kg
+
+select nome, nacionalidade from gafanhotos where sexo = 'M' and nacionalidade != 'Brasil' and peso < '100' and nome like '%Silva%';
+
+#35:21
+
+desc gafanhotos;
+
+select * from gafanhotos;
